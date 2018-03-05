@@ -18,6 +18,7 @@
 /*  * * * * * * * * * * * * * * * * * * * * * * * * * * *
  *   
   Code by Amanda Yamasaki
+  for Jan Tichy's Public Light and Space
   https://github.com/amandayamasaki
   
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -25,10 +26,13 @@
 #include "helper_files.h"
 #include <stdio.h>
 
-// creates instance of class based on the pin OUTPUT below (r, g, b)
-// theoretically we can add as many LEDs as we would like just by creating a new instance of LED
+// creates instance of an RGB LED based on the pin OUTPUT below (r, g, b)
 RGB_LED led_1(3,5,6);
 RGB_LED led_2(9,10,11);
+
+// creates instance of a white LED based on the pin OUTPUT below (pin) - testing using the on board pin 13...
+White_LED led_3(13);
+
 
 void setup() {
   
@@ -42,6 +46,15 @@ void loop() {
   
   led_1.fadeUpLed(0,0,100,50); 
   led_1.fadeDownLed(0,0,100,100); 
+
+
+  // pass in the (brightness, delay_time)
+  // if you're using a digital pin pass in 0 as delay time
+  
+  led_3.fadeUpLed(255, 0);
+  delay(50);
+  led_3.fadeDownLed(255, 0);
+  delay(50);
 }
 
 

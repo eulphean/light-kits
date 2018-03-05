@@ -1,4 +1,3 @@
-
 /*
  *      This program is free software; you can redistribute it and/or modify
  *      it under the terms of the GNU General Public License as published by
@@ -19,6 +18,7 @@
 /*  * * * * * * * * * * * * * * * * * * * * * * * * * * *
  *   
   Code by Amanda Yamasaki
+  for Jan Tichy's Public Light and Space
   https://github.com/amandayamasaki
   
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -26,6 +26,7 @@
 #include "helper_files.h"
 
 
+/* * *  This is for the RGB Led * * */
 RGB_LED::RGB_LED(int pin1, int pin2, int pin3){
   pinMode(pin1, OUTPUT);
   pinMode(pin2, OUTPUT);
@@ -35,7 +36,6 @@ RGB_LED::RGB_LED(int pin1, int pin2, int pin3){
   _pin2 = pin2;
   _pin3 = pin3;
 }
-
 void RGB_LED::fadeUpLed(int red, int green, int blue, int delay_time){
  int x = 0;
   while (x<255){
@@ -55,7 +55,6 @@ void RGB_LED::fadeUpLed(int red, int green, int blue, int delay_time){
     }
   }
 }
-
 void RGB_LED::fadeDownLed(int red, int green, int blue, int delay_time){
   int y= 255;
   while (y>0){
@@ -79,4 +78,31 @@ void RGB_LED::fadeDownLed(int red, int green, int blue, int delay_time){
     }
   }
 }
+
+
+
+/* * *  This is for the white Led * * */
+White_LED::White_LED(int pin){
+  pinMode(pin, OUTPUT);
+  _pin = pin;
+}
+
+void White_LED::fadeUpLed(int brightness, int delay_time){
+  for (int i=0; i<=brightness; i++){
+    analogWrite(_pin, i); 
+    delay(delay_time);
+  }
+}
+
+void White_LED::fadeDownLed(int brightness, int delay_time){
+  for (int i=brightness; i>=0; i--){
+    analogWrite(_pin, i); 
+    delay(delay_time);
+  }
+}
+
+
+
+
+
 

@@ -18,6 +18,7 @@
 /*  * * * * * * * * * * * * * * * * * * * * * * * * * * *
  *   
   Code by Amanda Yamasaki
+  for Jan Tichy's Public Light and Space
   https://github.com/amandayamasaki
   
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -38,4 +39,18 @@ struct RGB_LED{
     int _pin3;
 };
 
+struct White_LED{
+  public:
+    White_LED(int pin);
+    void fadeUpLed(int brightness, int delay_time);
+    void fadeDownLed(int brightness, int delay_time);
+  
+  private:
+    int _pin;
+};
+
 #endif
+
+
+
+
