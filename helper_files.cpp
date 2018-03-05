@@ -26,7 +26,7 @@
 #include "helper_files.h"
 
 
-LED::LED(int pin1, int pin2, int pin3){
+RGB_LED::RGB_LED(int pin1, int pin2, int pin3){
   pinMode(pin1, OUTPUT);
   pinMode(pin2, OUTPUT);
   pinMode(pin3, OUTPUT);
@@ -36,7 +36,7 @@ LED::LED(int pin1, int pin2, int pin3){
   _pin3 = pin3;
 }
 
-void LED::fadeUpLed(int red, int green, int blue, int delay_time){
+void RGB_LED::fadeUpLed(int red, int green, int blue, int delay_time){
  int x = 0;
   while (x<255){
     x += 5;
@@ -56,7 +56,7 @@ void LED::fadeUpLed(int red, int green, int blue, int delay_time){
   }
 }
 
-void LED::fadeDownLed(int red, int green, int blue, int delay_time){
+void RGB_LED::fadeDownLed(int red, int green, int blue, int delay_time){
   int y= 255;
   while (y>0){
     y-=5;

@@ -27,8 +27,8 @@
 
 // creates instance of class based on the pin OUTPUT below (r, g, b)
 // theoretically we can add as many LEDs as we would like just by creating a new instance of LED
-LED led_1(3,5,6);
-LED led_2(9,10,11);
+RGB_LED led_1(3,5,6);
+RGB_LED led_2(9,10,11);
 
 void setup() {
   

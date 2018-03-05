@@ -26,10 +26,9 @@
 #define helper_files_h
 #include "Arduino.h"
 
-struct LED
-{
+struct RGB_LED{
   public:
-    LED(int pin1, int pin2, int pin3);
+    RGB_LED(int pin1, int pin2, int pin3);
     void fadeUpLed(int red, int green, int blue, int delay_time);
     void fadeDownLed(int red, int green, int blue, int delay_time);
     
