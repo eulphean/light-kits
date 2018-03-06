@@ -14,7 +14,7 @@ C++ files for an Arduino light kit to be used for the School of the Art Institut
 ## How it Works (for Students):
 Now for the code! We can go through it *together*...
 Your *.ino* file should look something like this, and will be the <b>only</b> file you should be writing in -
-(the // indicates a comment.  I left these sprinkled in so y'all could have a better idea of whats happening, but the Arduino itself can't read them, so feel free to write your own notes in a similar fashion.)
+>The // in code indicates a comment.  I left these sprinkled in so y'all could have a better idea of whats happening, but the Arduino itself can't read them, so feel free to write your own notes in a similar fashion.
 
 ```C++
 #include "helper_files.h"
@@ -56,7 +56,7 @@ RGB_LED led_1(3,5,6);
 We are __calling a class__ to create a __new instance of *RGB_LED* that we are naming *led_1*__
 We are then __passing in three pins *(redpin, greenpin, bluepin)*__.
 
-A good metaphor for this would be to think about it like a recipe.  In the .cpp files and the .h files, I wrote the recipe for an RGB_LED.  In the .ino file, you are just calling the recipe, and adding in your own special sauce to customize your LED.  You can say *RGB_LED thisIsMySpecialLED(1,2,3)* and it would create an RGB_LED called thisIsMySpecialLED that has its red pin as 1, its green pin as 2 and its blue pin as 3.  
+>A good metaphor for this would be to think about it like a recipe.  In the .cpp files and the .h files, I wrote the recipe for an RGB_LED.  In the .ino file, you are just calling the recipe, and adding in your own special sauce to customize your LED.  You can say *RGB_LED thisIsMySpecialLED(1,2,3)* and it would create an RGB_LED called thisIsMySpecialLED that has its red pin as 1, its green pin as 2 and its blue pin as 3.  
 
 We can ignore the next lines (below) - we need this for more basic Arduino programming, but the magic for the setup are in the other files. 
 ```C++
@@ -111,12 +111,10 @@ If this is your first time coding, feel free to read over the below, but don't s
 There are two files that hold the class c'tor - so far I only have RGB and White lights in the repo, but I'll work on getting two LEDs to fade at the same time, LED strips, and whatever other light toys we want to use, so students can just create their own instance of the class with their own pins and names! *Yay!*
 
 The *helper_files.h* tells whether the functions in the class are public or private.  
+>I am declaring the class and functions as public, and the pins as private, so that we can pass in different values for the pins for only the class that we are constructing to reference.  This way we can have two instances of the class with two different sets of pins! 
+
 The *helper_files.cpp* holds the meat of the function.
-
-
-> In *helper_files.h*, I am declaring the class and functions as public, and the pins as private, so that we can pass in different values for the pins for only the class that we are constructing to reference.  This way we can have two instances of the class with two different sets of pins! 
-
-> In *helper_files.cpp*, I am iterating up 3 pins simultaneously to get the RGB LED to fade to a specific color and time.  We also have a function for white LEDs (digital and analog) for ~future~ LED kits. The while statement was the quick and dirty way to iterate three pins at once for RGB, and we can rethink this in the future!
+>I am iterating up 3 pins simultaneously to get the RGB LED to fade to a specific color and time.  We also have a function for white LEDs (digital and analog) for ~future~ LED kits. The while statement was the quick and dirty way to iterate three pins at once for RGB, and we can rethink this in the future!
 
 Feel free to reach out with any updates / ways we can make this better - I'll be posting the circuitry diagrams and more info once we have finalized the physical kits. 
 <br>
