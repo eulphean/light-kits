@@ -1,9 +1,9 @@
 # light-kits
-C++ files for an Arduino light kit to be used for the School of the Art Institute of Chicago's Art and Technology Department to teach the basics of hardware / code to undergraduate and graduate students.   
+C++ files for an Arduino light kit to be used for the School of the Art Institute of Chicago's Art and Technology Department to teach the basics of hardware / code to undergraduate and graduate students in Jan Tichy's Public Light and Space. 
 
 ***
 
-## Install steps (for Students):
+## Install steps:
 1. Download the whole repository using the green *download or clone button* 
 2. Open the whole folder in Arduino (make sure the folder that contains everything is called *light_kit*)
 3. <b>You would only be writing code in the *light_kit.ino file* </b> - the other files were written to make things a lot easier, and will be working their <b>magic</b> from behind the scenes.
@@ -40,6 +40,7 @@ void loop() {
 }
 ```
 
+__lets go through this line by line...__
 
 Ignore the first two lines (below) - we don't need to worry about these... They're just letting the code know to use the two other files that are working the magic. 
 ```C++
@@ -90,8 +91,8 @@ The final result should be something like we see above, where we have -
 
 aaaaaand thats it!
 <br>Create more LEDs by repeating these steps and calling them in the void loop(); 
-<br>Happy coding.  
-<br>Feel free to submit questions through this, and I'll try my best to get back to you. 
+<br>Feel free to submit questions through this, and I'll try my best to get back to you.v
+<br>Happy coding! 
 
 -- Amanda Yamasaki
 
@@ -100,7 +101,33 @@ aaaaaand thats it!
 ***
 
 
-## How it Works (for TAs && (advanced Students)):
+## How it Works (for TAs && (Advanced Students)):
+
+*This is where the magic happens*
+
+Now we get into the more complicated things - if you have any changes, feel free to pull and push, and we can keep this as a live code base for PLS!
+If this is your first time coding, feel free to read over the below, but don't sweat it if it doesn't make sense...
+
+There are two files that hold the class c'tor - so far I only have RGB and White lights in the repo, but I'll work on getting two LEDs to fade at the same time, LED strips, and whatever other light toys we want to use, so students can just create their own instance of the class with their own pins and names! *Yay!*
+
+The *helper_files.h* tells whether the functions in the class are public or private.  
+The *helper_files.cpp* holds the meat of the function.
+
+   In *helper_files.h*, I am declaring the class and functions as public, and the pins as private, so that we can pass in different values for the pins for only the class that we are constructing to reference.  This way we can have two instances of the class with two different sets of pins! 
+
+   In *helper_files.cpp*, I am iterating up 3 pins simultaneously to get the RGB LED to fade to a specific color and time.  We also have a function for white LEDs (digital and analog) for ~future~ LED kits. The while statement was the quick and dirty way to iterate three pins at once for RGB, and we can rethink this in the future!
+
+Feel free to reach out with any updates / ways we can make this better - I'll be posting the circuitry diagrams and more info once we have finalized the physical kits. 
+<br>Feel free to submit questions through this as well, and I'll try my best to get back to you.
+<br>Happy coding! 
+
+-- Amanda Yamasaki
+
+
+
+
+
+
 
 
 
