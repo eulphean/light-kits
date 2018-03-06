@@ -4,10 +4,11 @@ C++ files for an Arduino light kit to be used for the School of the Art Institut
 ***
 
 ## Install steps:
-1. Download the whole repository using the green *download or clone button* 
-2. Open the whole folder in Arduino (make sure the folder that contains everything is called *light_kit*)
-3. <b>You would only be writing code in the *light_kit.ino file* </b> - the other files were written to make things a lot easier, and will be working their <b>magic</b> from behind the scenes.
-   (Also, if you are prompted to create a new folder, make sure both the *.cpp* and the *.h* file are in the same folder as the *.ino* file!)  
+1. Download the whole repository using the green *download or clone button*.
+2. Open the whole folder in Arduino (make sure the folder that contains everything is called *light_kit*).
+3. <b>You would only be writing code in the *light_kit.ino file* </b> - the other files were written to make things a lot easier, and will be working their magic from behind the scenes.
+
+>(Also, if you are prompted to create a new folder, make sure both the *.cpp* and the *.h* file are in the same folder as the *.ino* file!)  
 
 ***
 
