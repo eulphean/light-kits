@@ -92,7 +92,7 @@ The final result should be something like we see above, where we have -
 
 aaaaaand thats it!
 <br>Create more LEDs by repeating these steps and calling them in the void loop(); 
-<br>Feel free to submit questions through this, and I'll try my best to get back to you.v
+<br>Feel free to submit questions through this, and I'll try my best to get back to you. :)
 <br>Happy coding! 
 
 -- Amanda Yamasaki
