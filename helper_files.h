@@ -30,8 +30,8 @@
 struct RGB_LED{
   public:
     RGB_LED(int pin1, int pin2, int pin3);
-    void fadeUpLed(int red, int green, int blue, int delay_time);
-    void fadeDownLed(int red, int green, int blue, int delay_time);
+    void fadeUpLedTo(int red, int green, int blue, int delay_time);
+    void fadeDownLedFrom(int red, int green, int blue, int delay_time);
     
   private:
     int _pin1;
@@ -42,8 +42,8 @@ struct RGB_LED{
 struct White_LED{
   public:
     White_LED(int pin);
-    void fadeUpLed(int brightness, int delay_time);
-    void fadeDownLed(int brightness, int delay_time);
+    void fadeUpLedTo(int brightness, int delay_time);
+    void fadeDownLedFrom(int brightness, int delay_time);
   
   private:
     int _pin;

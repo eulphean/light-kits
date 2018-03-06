@@ -35,8 +35,8 @@ void loop() {
   // pass in (red value, green value, blue value, delay time)
   // if you pass in 0 as delay time, it will just set that color static without fade
   
-  led_1.fadeUpLed(0,0,100,50); 
-  led_1.fadeDownLed(0,0,100,100); 
+  led_1.fadeUpLedTo(0,0,100,50); 
+  led_1.fadeDownLedFrom(0,0,100,100); 
 
 }
 ```
@@ -69,9 +69,9 @@ void setup() {
 Now for the real action!
 In the void loop(), this code repeats itself over and over again and is native to Arduino. 
 ```C++
-void setup() {
-  led_1.fadeUpLed(0,0,100,50); 
-  led_1.fadeDownLed(0,0,100,100); 
+void loop() {
+  led_1.fadeUpLedTo(0,0,100,50); 
+  led_1.fadeDownLedFrom(0,0,100,100); 
 }
 ```
 __Remember the instance of *RGB_LED* we made above called *led_1*?__
@@ -80,15 +80,18 @@ __Remember the instance of *RGB_LED* we made above called *led_1*?__
 
 Right now, we have the ability to use these methods:
 ```C++
-.fadeUpLed(red_value, green_value, blue_value, delay_time);
-.fadeDownLed(red_value, green_value, blue_value, delay_time);
+.fadeUpLedTo(red_value, green_value, blue_value, delay_time);
+delay(50)
+.fadeDownLedFrom(red_value, green_value, blue_value, delay_time);
+delay(50)
 ```
 And we are passing in four values to it.
 the first three stand for __red__, __green__ and __blue__, and the last is for the __delay time__, or the amount of time it would take to fade up to the specific RGB color you have.  If you wanted it to be instantaneous, pass in 0. 
+The second delay is to keep it at whatever the previous color you faded up to or faded down from.  
 >I will continue to add methods and write more documentation for the new ones!
 
 The final result should be something like we see above, where we have - 
-<br>__thisIsMySpecialLED.fadeUpLed(red_value, green_value, blue_value, delay);__
+<br>__thisIsMySpecialLED.fadeUpLedTo(red_value, green_value, blue_value, delay);__
 
 
 aaaaaand thats it!

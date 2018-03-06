@@ -28,7 +28,6 @@
 
 // creates instance of an RGB LED based on the pin OUTPUT below (r, g, b)
 RGB_LED led_1(3,5,6);
-RGB_LED led_2(9,10,11);
 
 
 void setup() {
@@ -41,8 +40,8 @@ void loop() {
   // pass in (red value, green value, blue value, delay time)
   // if you pass in 0 as delay time, it will just set that color static without fade
   
-  led_1.fadeUpLed(0,0,100,50); 
-  led_1.fadeDownLed(0,0,100,100); 
+  led_1.fadeUpLedTo(0,0,100,50); 
+  led_1.fadeDownLedFrom(0,0,100,100); 
 
 }
 

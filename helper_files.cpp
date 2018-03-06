@@ -36,7 +36,7 @@ RGB_LED::RGB_LED(int pin1, int pin2, int pin3){
   _pin2 = pin2;
   _pin3 = pin3;
 }
-void RGB_LED::fadeUpLed(int red, int green, int blue, int delay_time){
+void RGB_LED::fadeUpLedTo(int red, int green, int blue, int delay_time){
  int x = 0;
   while (x<255){
     x += 5;
@@ -55,7 +55,7 @@ void RGB_LED::fadeUpLed(int red, int green, int blue, int delay_time){
     }
   }
 }
-void RGB_LED::fadeDownLed(int red, int green, int blue, int delay_time){
+void RGB_LED::fadeDownLedFrom(int red, int green, int blue, int delay_time){
   int y= 255;
   while (y>0){
     y-=5;
@@ -87,14 +87,14 @@ White_LED::White_LED(int pin){
   _pin = pin;
 }
 
-void White_LED::fadeUpLed(int brightness, int delay_time){
+void White_LED::fadeUpLedTo(int brightness, int delay_time){
   for (int i=0; i<=brightness; i++){
     analogWrite(_pin, i); 
     delay(delay_time);
   }
 }
 
-void White_LED::fadeDownLed(int brightness, int delay_time){
+void White_LED::fadeDownLedFrom(int brightness, int delay_time){
   for (int i=brightness; i>=0; i--){
     analogWrite(_pin, i); 
     delay(delay_time);
