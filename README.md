@@ -12,7 +12,7 @@ C++ files for an Arduino light kit to be used for the School of the Art Institut
 ***
 
 ## How it Works (for Students):
-Now for the code! We can go through it together...
+Now for the code! We can go through it *together*...
 Your *.ino* file should look something like this, and will be the <b>only</b> file you should be writing in -
 (the // indicates a comment.  I left these sprinkled in so y'all could have a better idea of whats happening, but the Arduino itself can't read them, so feel free to write your own notes in a similar fashion.)
 
@@ -90,7 +90,8 @@ The final result should be something like we see above, where we have -
 
 aaaaaand thats it!
 <br>Create more LEDs by repeating these steps and calling them in the void loop(); 
-<br>Happy coding.  Feel free to submit questions through this, and I'll try my best to get back to you. 
+<br>Happy coding.  
+<br>Feel free to submit questions through this, and I'll try my best to get back to you. 
 
 -- Amanda Yamasaki
 
