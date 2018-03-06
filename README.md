@@ -77,10 +77,10 @@ __Remember the instance of *RGB_LED* we made above called *led_1*?__
 <br>Now we are putting it into action. 
 <br>We are calling our instance of RGB_LED by stating its name (led_1), and attaching the action (or method) we are trying to have it execute - its sort of like plain non-code-y English, we are telling led_1 to fade up to a color, and fade down from that color to black and to repeat.  
 
-Right now, we have the ability to use:
+Right now, we have the ability to use these methods:
 ```C++
-.fadeUpLed()
-.fadeDownLed()
+.fadeUpLed(red_value, green_value, blue_value, delay_time);
+.fadeDownLed(red_value, green_value, blue_value, delay_time);
 ```
 And we are passing in four values to it.
 the first three stand for __red__, __green__ and __blue__, and the last is for the __delay time__, or the amount of time it would take to fade up to the specific RGB color you have.  If you wanted it to be instantaneous, pass in 0. 
