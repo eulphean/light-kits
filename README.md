@@ -95,7 +95,7 @@ aaaaaand thats it!
 <br>Feel free to submit questions through this, and I'll try my best to get back to you. :)
 <br>Happy coding! 
 
--- Amanda Yamasaki
+-- Amanda
 
 
 
@@ -122,8 +122,11 @@ Feel free to reach out with any updates / ways we can make this better - I'll be
 <br>Feel free to submit questions through this as well, and I'll try my best to get back to you.
 <br>Happy coding! 
 
--- Amanda Yamasaki
+-- Amanda
 
+***
+
+&copy; Amanda Yamasaki 2018
 
 
 
