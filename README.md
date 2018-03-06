@@ -119,11 +119,6 @@ The *helper_files.cpp* holds the meat of the function.
 >I am iterating up 3 pins simultaneously to get the RGB LED to fade to a specific color and time.  We also have a function for white LEDs (digital and analog) for ~future~ LED kits. The while statement was the quick and dirty way to iterate three pins at once for RGB, and we can rethink this in the future!
 
 Feel free to reach out with any updates / ways we can make this better - I'll be posting the circuitry diagrams and more info once we have finalized the physical kits. 
-<br>
-<br>Feel free to submit questions through this as well, and I'll try my best to get back to you.
-<br>Happy coding! 
-
--- Amanda
 
 ***
 
