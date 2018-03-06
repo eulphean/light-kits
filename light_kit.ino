@@ -40,8 +40,20 @@ void loop() {
   // pass in (red value, green value, blue value, delay time)
   // if you pass in 0 as delay time, it will just set that color static without fade
   
-  led_1.fadeUpLedTo(0,0,100,50); 
-  led_1.fadeDownLedFrom(0,0,100,100); 
+  led_1.fadeUpLedTo(255,0,0,50); 
+  delay(50);
+  led_1.fadeDownLedFrom(255,0,0,100); 
+  delay(50);
+
+  led_1.fadeUpLedTo(0,255,0,50); 
+  delay(50);
+  led_1.fadeDownLedFrom(0,255,0,100); 
+  delay(50);
+
+  led_1.fadeUpLedTo(0,0,255,50); 
+  delay(50);
+  led_1.fadeDownLedFrom(0,0,255,100); 
+  delay(50);
 
 }
 

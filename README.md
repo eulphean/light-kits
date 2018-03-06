@@ -36,7 +36,9 @@ void loop() {
   // if you pass in 0 as delay time, it will just set that color static without fade
   
   led_1.fadeUpLedTo(0,0,100,50); 
+  delay(50);
   led_1.fadeDownLedFrom(0,0,100,100); 
+  delay(50);
 
 }
 ```
@@ -71,7 +73,9 @@ In the void loop(), this code repeats itself over and over again and is native t
 ```C++
 void loop() {
   led_1.fadeUpLedTo(0,0,100,50); 
+  delay(50);
   led_1.fadeDownLedFrom(0,0,100,100); 
+  delay(50);
 }
 ```
 __Remember the instance of *RGB_LED* we made above called *led_1*?__
@@ -81,9 +85,9 @@ __Remember the instance of *RGB_LED* we made above called *led_1*?__
 Right now, we have the ability to use these methods:
 ```C++
 .fadeUpLedTo(red_value, green_value, blue_value, delay_time);
-delay(50)
+delay(50);
 .fadeDownLedFrom(red_value, green_value, blue_value, delay_time);
-delay(50)
+delay(50);
 ```
 And we are passing in four values to it.
 the first three stand for __red__, __green__ and __blue__, and the last is for the __delay time__, or the amount of time it would take to fade up to the specific RGB color you have.  If you wanted it to be instantaneous, pass in 0. 
