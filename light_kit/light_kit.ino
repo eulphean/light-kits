@@ -27,36 +27,61 @@
 #include <stdio.h>
 
 // creates instance of an RGB LED based on the pin OUTPUT below (r, g, b)
-RGB_LED led_1(3,5,6);
+//RGB_LED led_1(3, 5, 6);
+//RGB_LED led_2(9, 10, 11);
 
+const int led1[] = {3, 5, 6};
+const int led2[] = {9, 10, 11};
+const int leds[] = {1, 2}; 
 
 void setup() {
-  
+  pinMode(led1[0], OUTPUT);
+  pinMode(led1[1], OUTPUT);
+  pinMode(led1[2], OUTPUT);
+
+  pinMode(led2[0], OUTPUT);
+  pinMode(led2[1], OUTPUT);
+  pinMode(led2[2], OUTPUT);
 }
 
 void loop() {
-  // call the LED you made by putting the led name and the method (action) attached to it
-  // should be like myLEDname.thisIsTheAction()
-  // pass in (red value, green value, blue value, delay time)
-  // if you pass in 0 as delay time, it will just set that color static without fade
-  
-  led_1.fadeUpLedTo(255,0,0,50); 
-  delay(50);
-  led_1.fadeDownLedFrom(255,0,0,100); 
-  delay(50);
+   // White
+  setRGB(
 
-  led_1.fadeUpLedTo(0,255,0,50); 
-  delay(50);
-  led_1.fadeDownLedFrom(0,255,0,100); 
-  delay(50);
+  // White
+    analogWrite(led2[0], 150);
+   analogWrite(led2[1], 150);
+   analogWrite(led2[2], 150);
+  // Red
+//  led_1.fadeUpLedTo(255,255,255,60); 
+//  led_1.fadeDownLedFrom(255,0,0,60); 
+//
+//  // Green
+//  led_1.fadeUpLedTo(0,255,0,60); 
+//  led_1.fadeDownLedFrom(0,255,0,60); 
+//
+//  // Blue
+//  led_1.fadeUpLedTo(0,0,255,60); 
+//  led_1.fadeDownLedFrom(0,0,255,60); 
 
-  led_1.fadeUpLedTo(0,0,255,50); 
-  delay(50);
-  led_1.fadeDownLedFrom(0,0,255,100); 
-  delay(50);
-
+  // Red
+//  led_2.fadeUpLedTo(255,255,255,60); 
+//  led_2.fadeDownLedFrom(255,0,0,60); 
+//
+//  // Green
+//  led_2.fadeUpLedTo(0,255,0,60); 
+//  led_2.fadeDownLedFrom(0,255,0,60); 
+//
+//  // Blue
+//  led_2.fadeUpLedTo(0,0,255,60); 
+//  led_2.fadeDownLedFrom(0,0,255,60); 
 }
 
+void setRGB(int red, int green, int blue, int ledNum, int brightness) {
+   analogWrite(led1[0], 150);
+   analogWrite(led1[1], 150);
+   analogWrite(led1[2], 150);
+}
 
 
 
