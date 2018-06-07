@@ -83,9 +83,9 @@ void setRGB1Color(int red, int green, int blue) {
 
 // LED2 color setter
 void setRGB2Color(int red, int green, int blue) {
-  analogWrite(led1[1], red);
-  analogWrite(led1[2], green);
-  analogWrite(led1[3], blue);
+  analogWrite(led2[0], red);
+  analogWrite(led2[1], green);
+  analogWrite(led2[2], blue);
 }
 
 
