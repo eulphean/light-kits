@@ -17,72 +17,76 @@
 
 /*  * * * * * * * * * * * * * * * * * * * * * * * * * * *
  *   
-  Code by Amanda Yamasaki
-  for Jan Tichy's Public Light and Space
-  https://github.com/amandayamasaki
+  Author: Amay Kataria
+  Date: 05/06/2018
   
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-#include "helper_files.h"
-#include <stdio.h>
-
-// creates instance of an RGB LED based on the pin OUTPUT below (r, g, b)
-//RGB_LED led_1(3, 5, 6);
-//RGB_LED led_2(9, 10, 11);
-
+// Define LED pins. 
 const int led1[] = {3, 5, 6};
 const int led2[] = {9, 10, 11};
-const int leds[] = {1, 2}; 
+
+// Record the last time to track the time of the LED. 
+unsigned long lastTime; 
+
+// Current LED state. 
+bool ledOn = true; 
+
+int blinkTime = 1000; // 1 second - 1000 ms
+// By decreasing this number, you can make the led blink faster. 
+// This is the time it's ON and then OFF. 
 
 void setup() {
+
+  // Initialize LED1
   pinMode(led1[0], OUTPUT);
   pinMode(led1[1], OUTPUT);
   pinMode(led1[2], OUTPUT);
 
+  // Initialize LED2
   pinMode(led2[0], OUTPUT);
   pinMode(led2[1], OUTPUT);
   pinMode(led2[2], OUTPUT);
+
+  // Record starting time. 
+  lastTime = millis(); 
 }
 
 void loop() {
-   // White
-  setRGB(
 
-  // White
-    analogWrite(led2[0], 150);
-   analogWrite(led2[1], 150);
-   analogWrite(led2[2], 150);
-  // Red
-//  led_1.fadeUpLedTo(255,255,255,60); 
-//  led_1.fadeDownLedFrom(255,0,0,60); 
-//
-//  // Green
-//  led_1.fadeUpLedTo(0,255,0,60); 
-//  led_1.fadeDownLedFrom(0,255,0,60); 
-//
-//  // Blue
-//  led_1.fadeUpLedTo(0,0,255,60); 
-//  led_1.fadeDownLedFrom(0,0,255,60); 
+  // NOTE: This will produce a lot of heat. 
+  unsigned long currentTime = millis(); 
 
-  // Red
-//  led_2.fadeUpLedTo(255,255,255,60); 
-//  led_2.fadeDownLedFrom(255,0,0,60); 
-//
-//  // Green
-//  led_2.fadeUpLedTo(0,255,0,60); 
-//  led_2.fadeDownLedFrom(0,255,0,60); 
-//
-//  // Blue
-//  led_2.fadeUpLedTo(0,0,255,60); 
-//  led_2.fadeDownLedFrom(0,0,255,60); 
+  // LED 1 should be white and blinking every *blinkTime seconds*.  
+  if (currentTime - lastTime < blinkTime) {
+    if (ledOn) {
+      setRGB1Color(255, 255, 255);
+    } else {
+      setRGB1Color(0, 0, 0);
+    }
+  } else {
+    lastTime = millis(); // Reset time. 
+    ledOn = !ledOn; // Change the ledState. 
+  }
+  
+  // Caution - this will get really hot. 
+  //LED2 is White
+  setRGB2Color(255, 255, 255);
 }
 
-void setRGB(int red, int green, int blue, int ledNum, int brightness) {
-   analogWrite(led1[0], 150);
-   analogWrite(led1[1], 150);
-   analogWrite(led1[2], 150);
+// LED1 color setter
+void setRGB1Color(int red, int green, int blue) {
+   analogWrite(led1[0], red);
+   analogWrite(led1[1], green);
+   analogWrite(led1[2], blue);
 }
 
+// LED2 color setter
+void setRGB2Color(int red, int green, int blue) {
+  analogWrite(led1[1], red);
+  analogWrite(led1[2], green);
+  analogWrite(led1[3], blue);
+}
 
 
 
