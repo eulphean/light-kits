@@ -54,24 +54,26 @@ void setup() {
 
 void loop() {
 
-  // NOTE: This will produce a lot of heat. 
-  unsigned long currentTime = millis(); 
+//  // NOTE: This will produce a lot of heat. 
+//  unsigned long currentTime = millis(); 
+//
+//  // LED 1 should be white and blinking every *blinkTime seconds*.  
+//  if (currentTime - lastTime < blinkTime) {
+//    if (ledOn) {
+//      setRGB1Color(255, 255, 255);
+//    } else {
+//      setRGB1Color(0, 0, 0);
+//    }
+//  } else {
+//    lastTime = millis(); // Reset time. 
+//    ledOn = !ledOn; // Change the ledState. 
+//  }
+//  
+//  // Caution - this will get really hot. 
+//  //LED2 is White
+//  setRGB2Color(255, 255, 255);
 
-  // LED 1 should be white and blinking every *blinkTime seconds*.  
-  if (currentTime - lastTime < blinkTime) {
-    if (ledOn) {
-      setRGB1Color(255, 255, 255);
-    } else {
-      setRGB1Color(0, 0, 0);
-    }
-  } else {
-    lastTime = millis(); // Reset time. 
-    ledOn = !ledOn; // Change the ledState. 
-  }
-  
-  // Caution - this will get really hot. 
-  //LED2 is White
-  setRGB2Color(255, 255, 255);
+  setRGB1Color(255, 255, 255);
 }
 
 // LED1 color setter
