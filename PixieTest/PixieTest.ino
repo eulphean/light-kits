@@ -50,7 +50,7 @@ void setup() {
 }
 
 void loop() {
-  strip.setPixelColor(0, 150, 150, 150);
+  strip.setPixelColor(0, 50, 50, 50);
   strip.show();
 //  Serial.println("Rainbow!");
   //rainbowCycle(10);
